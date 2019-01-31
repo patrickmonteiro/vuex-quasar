@@ -1,13 +1,17 @@
 <template>
-  <div>{{ count }}</div>
+  <div>
+    <div>State Count: {{ count }}</div>
+    <div>Getter Count status true: {{ activeUsersCount }}</div>
+  </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'PageIndex',
   computed: {
-    ...mapState('example', ['count'])
+    ...mapState('example', ['count']),
+    ...mapGetters('example', ['activeUsersCount'])
   }
 }
 </script>

@@ -1,4 +1,7 @@
-/*
-export function someGetter (state) {
+const activeUsersCount = (state) => {
+  return state.users.filter(user => user.status).length
 }
-*/
+
+export {
+  activeUsersCount
+}
